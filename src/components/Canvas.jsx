@@ -13,10 +13,10 @@ const CanvasArea = ({ onTextSelect }) => {
   };
 
   const handleCanvasClick = (e) => {
-    // Prevent deselection if clicking on a text
+  
     if (e.target.closest(".text-item")) return;
 
-    // Unselect the text
+   
     setSelectedTextId(null);
     onTextSelect(null);
   };
@@ -24,7 +24,7 @@ const CanvasArea = ({ onTextSelect }) => {
   return (
     <div
       className="relative lg:w-1/2 bg-white rounded shadow-lg h-full overflow-hidden"
-      onClick={handleCanvasClick} // Attach the click handler
+      onClick={handleCanvasClick} 
     >
       {texts.map((text) => (
         <Rnd
